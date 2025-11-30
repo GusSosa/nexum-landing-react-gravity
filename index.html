@@ -321,9 +321,47 @@
                     normativa.
                 </p>
             </div>
-            <div class="cta-actions">
-                <a href="mailto:contacto@nexum.io" class="btn-primary">Escríbenos</a>
-                <p class="cta-note">También podemos agendar una sesión exploratoria con tu equipo.</p>
+            <div class="cta-form-container">
+                <form id="contact-form" action="https://formspree.io/f/mjkngvnr" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Nombre y apellidos</label>
+                        <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email corporativo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" class="sr-only">Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Empresa (opcional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type" class="sr-only">Tipo de proyecto</label>
+                        <select id="project-type" name="project-type">
+                            <option value="" disabled selected>Tipo de proyecto</option>
+                            <option value="Consultoría en IA">Consultoría en IA</option>
+                            <option value="Gobierno del dato">Gobierno del dato</option>
+                            <option value="Formación">Formación</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message" class="sr-only">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" placeholder="¿Cómo podemos ayudarte?"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>Enviar mensaje</span>
+                        </button>
+                        <div id="form-status" class="form-status" aria-live="polite"></div>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
